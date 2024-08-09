@@ -27,7 +27,7 @@ function App() {
     // Automatically close the modal after a certain time (optional)
     const timer = setTimeout(() => {
       setIsModalOpen(false);
-    }, 30000); // Close modal after 30 seconds
+    }, 10000); // Close modal after 10 seconds
 
     return () => clearTimeout(timer);
   }, []);

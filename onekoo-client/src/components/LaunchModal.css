@@ -1,26 +1,102 @@
-/* src/components/LaunchModal.css */
-.Overlay {
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-  
-  .Modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    overflow: visible;
-  }
-  
+/* LaunchModal.css */
+
+/* General Modal Styles */
+.ModalContent {
+  padding: 20px;
+  text-align: center;
+  background-color: #efc3a4;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 8.0);
+}
+
+.ModalContent img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-left: 38%;
+}
+
+.ModalContent h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ModalContent p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.ModalContent ol {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.ModalContent button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4b1f0e;
+  color: #efc3a4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ModalContent button:hover {
+  background-color: #efc3a4;
+  color: #4b1f0e;
+  border-radius: 8px;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
   .ModalContent {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: 0 auto;
   }
-  
+
+  .ModalContent h2 {
+    font-size: 2.5rem;
+  }
+
+  .ModalContent p,
+  .ModalContent li {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ModalContent {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .ModalContent h2 {
+    font-size: 2rem;
+  }
+
+  .ModalContent p,
+  .ModalContent li {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .ModalContent {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .ModalContent h2 {
+    font-size: 1.8rem;
+  }
+
+  .ModalContent p,
+  .ModalContent li {
+    font-size: 1rem;
+  }
+
+  .ModalContent ol {
+    padding-left: 20px;
+  }
+}
