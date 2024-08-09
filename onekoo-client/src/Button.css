@@ -1,0 +1,68 @@
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #FEF5E6;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .button .bgContainer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEF5E6;
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover .bgContainer {
+    transform: translateY(-100%);
+  }
+  
+  .button .bgContainer span {
+    color: #612203;
+    font-weight: bold;
+  }
+  
+  .button .arrowContainer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+  }
+  
+  .button svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .price-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1em 0.5rem;
+    background-color: #fff;
+    border: 2px solid #612203;
+    border-radius: 10px;
+    color: #612203;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .price-input {
+    width: 60px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #612203;
+    font-weight: bold;
+    padding: 0.2rem 0; /* Adjust padding to reduce height */
+    height: 1.5rem; /* Adjust height if needed */
+  }
+  

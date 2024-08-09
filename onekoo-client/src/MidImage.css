@@ -1,0 +1,51 @@
+.mid-image-wrapper {
+    position: relative; /* Positions children absolutely relative to this container */
+    width: 100%; /* Ensures full width of the container */
+    padding-top: 20px; /* Space between the header and the top of the container */
+}
+
+.header {
+    position: absolute;
+    top: 0; /* Aligns header to the top of the container */
+    left: 220px; /* Moves header 50px to the right */
+    padding: 20px; /* Adds padding around the header text */
+    background: rgba(255, 255, 255, 0.8); /* Optional: adds a semi-transparent background */
+    border-bottom: 1px solid #ddd; /* Optional: adds a border below the header */
+    z-index: 10; /* Ensures header is above the slider */
+}
+
+.header h2 {
+    margin: 0; /* Removes default margin */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the text color as needed */
+}
+
+.header-description {
+    margin-top: 10px; /* Space between the header and the description */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #666; /* Adjust text color as needed */
+}
+
+.additional-info {
+    margin-top: 20px; /* Adds more space between the description and the additional information */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #444; /* Adjust text color as needed */
+}
+
+.slider-container {
+    margin-top: 100px; /* Adjust this value based on header height */
+}
+
+.slider-item {
+    position: relative;
+    padding-right: 50px; /* Adjust this value to set the gap between images */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+.slider-image {
+    width: 1000px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin-left: -150px; /* Adjust this value to control the left shift */
+    margin-right: 50px; /* Adjust this value to create a gap */
+    display: block; /* Ensure images are displayed as block-level elements */
+}

@@ -1,0 +1,115 @@
+/* SpecialProduct.css */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Increased max-width */
+    height: 600px; /* Increased height */
+    margin: 0 auto;
+}
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px; /* Increased gap for better spacing */
+}
+  
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    background-color: #583c15;
+    color: white;
+    font-size: 24px;
+    padding: 20px; /* Increased padding */
+    height: 200px; /* Adjusted height */
+    position: relative; /* Ensure positioning of details */
+    overflow: hidden; /* Ensure overflow is hidden */
+    border-radius: 12px; /* Rounded corners with slight curve */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+  
+.grid-item img {
+    width: 120px; /* Adjusted image width */
+    height: 120px; /* Adjusted image height */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 10px;
+}
+  
+.item-details {
+    position: absolute;
+    bottom: 20px; /* Adjusted position */
+    right: 20px; /* Adjusted position */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px; /* Padding for button container */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+  
+.item-details p {
+    margin: 5px 0;
+    font-size: 14px; /* Adjusted font size */
+}
+  
+.add-to-cart-btn {
+    background-color: #e2935b;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Adjusted padding */
+    font-size: 16px; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 12px; /* Rounded corners for the button */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Added box shadow */
+}
+  
+.add-to-cart-btn:hover {
+    background-color: #59200c;
+}
+  
+.slick-prev,
+.slick-next {
+    width: 40px; /* Increased width */
+    height: 40px; /* Increased height */
+    z-index: 1;
+    background-color: #e4e9e8;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+  
+.slick-prev:before,
+.slick-next:before {
+    font-size: 24px; /* Increased font size */
+    color: #000;
+}
+  
+.custom-prev-arrow:before {
+    content: '←'; /* Unicode for left arrow */
+}
+  
+.custom-next-arrow:before {
+    content: '→'; /* Unicode for right arrow */
+}
+  
+.slick-prev {
+    left: -50px; /* Adjusted position */
+}
+  
+.slick-next {
+    right: -50px; /* Adjusted position */
+}
+  
+.slick-dots li button:before {
+    font-size: 12px; /* Increased font size */
+    color: #aaa;
+    opacity: 1;
+}
+  
+.slick-dots li.slick-active button:before {
+    color: #333;
+}

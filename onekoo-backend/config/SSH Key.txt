@@ -1,0 +1,23 @@
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/onekoofx/.ssh/id_rsa.
+Your public key has been saved in /home/onekoofx/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:4GX8P6YWnDy7Xbb9pbYFEK/Y3+Af//5D+wfvarCclsY 
+The key's randomart image is:
++---[RSA 2048]----+
+|            .    |
+|       .     o   |
+|      . +   . .  |
+|     . + . o o   |
+|      . Soo.o o  |
+|          *..o.= |
+|           *+=*+=|
+|          o+E+oO*|
+|         .o+.o==^|
++----[SHA256]-----+
+
+
+source /home/onekoofx/nodevenv/back.onekoocoffee.com/20/bin/activate && cd /home/onekoofx/back.onekoocoffee.com
+
