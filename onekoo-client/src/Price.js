@@ -36,18 +36,18 @@ function Price({ cart, user }) {
       });
   }, []);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3001/api/prices")
-      .then((response) => {
-        const { price1, price2 } = response.data;
-        setPrice1(price1);
-        setPrice2(price2);
-      })
-      .catch((error) => {
-        console.error("Error fetching prices:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3001/api/prices")
+  //     .then((response) => {
+  //       const { price1, price2 } = response.data;
+  //       setPrice1(price1);
+  //       setPrice2(price2);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching prices:", error);
+  //     });
+  // }, []);
 
   // const handleProceedClick = () => {
   //   const numPrice1 = parseFloat(price1) || 0;

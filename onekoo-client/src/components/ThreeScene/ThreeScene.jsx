@@ -367,7 +367,7 @@ const ThreeScene = () => {
     const addClickableObject = (position, targetPage) => {
       const geometry = new THREE.BoxGeometry(4, 4, 4);
       const material = new THREE.MeshBasicMaterial({
-        color: 0x6a6a6a,
+        // color: 0x6a6a6a,
         transparent: true,
         opacity: 0.01,
       });

@@ -16,7 +16,7 @@ function Filter({ products, setProducts, fetchAgain }) {
 
   useEffect(() => {
     axios
-      .get("https://back.onekoocoffee.com/api/shops/all-shops")
+      .get(`https://back.onekoocoffee.com/api/shops/all-shops`)
       .then((res) => {
         console.log(res.data);
         setShops(res.data);

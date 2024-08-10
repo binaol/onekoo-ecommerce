@@ -24,7 +24,7 @@ const Shop = () => {
   axios.defaults.withCredentials = true;
   useEffect(() => {
     axios
-      .get("https://back.onekoocoffee.com/api/products/get-all") // Replace with your API endpoint
+      .get(`https://back.onekoocoffee.com/api/products/get-all`) // Replace with your API endpoint
       .then((response) => {
         console.log(response.data.products);
         setProducts(response.data.products);
@@ -39,7 +39,7 @@ const Shop = () => {
 
   const fetchAgain = () => {
     axios
-      .get("https://back.onekoocoffee.com/api/products/get-all") // Replace with your API endpoint
+      .get(`https://back.onekoocoffee.com/api/products/get-all`) // Replace with your API endpoint
       .then((response) => {
         console.log(
           response.data.products.filter((product) => {
@@ -55,43 +55,73 @@ const Shop = () => {
   };
   return (
     <React.Fragment>
-      <div className="bg-white">
+      {/* Desktop and Tablet View */}
+      <div className="hidden md:block bg-white">
         <BigBanner />
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Filter and Cart section */}
-          <div className="md:flex md:justify-between md:items-center md:my-4">
-            <div className="mb-4 md:w-1/3">
-              <Filter products={products} fetchAgain={fetchAgain} />
+        <div className="my-4 w-[1200px] justify-center flex flex-col ml-[10rem]">
+          <div className="my-4 w-[1200px] justify-center flex flex-row">
+            <Filter
+              products={products}
+              fetchAgain={fetchAgain}
+              setProducts={setProducts}
+            />
+            <div className="flex flex-col">
+              <div className="w-[1000px] h-[100px] mt-16 px-8">
+                <CenterBanner
+                  products={products}
+                  setProducts={setProducts}
+                  fetchAgain={fetchAgain}
+                />
+              </div>
+              <div>
+                <Product products={products} addToCart={addToCart} />
+              </div>
             </div>
-            <div className="mb-4 md:w-1/3">
+            <div>
               <Cart cart={cart} />
             </div>
           </div>
-
-          {/* Center Banner section */}
-          <CenterBanner
-            products={products}
-            setProducts={setProducts}
-            fetchAgain={fetchAgain}
-          />
-
-          {/* Product section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Product products={products} addToCart={addToCart} />
-          </div>
-
-          {/* Ad Banners section */}
-          <div className="md:flex md:justify-between md:items-center md:my-4">
-            <div className="mb-4 md:w-1/3">
-              <LeftAd />
+          <hr className="mt-10 border-golden" />
+          <div className="my-4 mt-[1rem] w-[1200px] justify-center flex flex-row">
+            <LeftAd />
+            <div className="flex flex-col">
+              <div className="w-[800px] h-[100px] mt-16 px-1">
+                <AdBanner />
+              </div>
+              <div>
+                <SpecialProduct />
+              </div>
             </div>
-            <div className="mb-4 md:w-1/3">
-              <RightAd />
+            <RightAd />
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile View */}
+      <div className="block md:hidden">
+        <BigBanner />
+        <div className="mb-4 mt-[-5rem] px-4">
+          <div className="flex justify-between mb-4 gap-4 w-auto">
+            <div className="w-[50%]">
+              <Filter />
+            </div>
+            <div className="w-[50%]">
+              <Cart />
             </div>
           </div>
-
-          {/* Special Product section */}
-          <SpecialProduct />
+          <div className="mb-4">
+            <CenterBanner />
+          </div>
+          <div className="mb-4 mt-[-30rem]">
+            <Product addToCart={addToCart} />
+          </div>
+          <div className="flex justify-between gap-4">
+            <LeftAd />
+            <RightAd />
+          </div>
+          <div className="mb-4 mt-[10rem]">
+            <SpecialProduct />
+          </div>
         </div>
       </div>
     </React.Fragment>
